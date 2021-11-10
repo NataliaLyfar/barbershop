@@ -11,35 +11,44 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
       <!--Хедер сайдбар-->
-      <a class="header-logo" href="./index.html"
-        ><img src="./img/Logo.svg" alt="logo сайта"
-      /></a>
-      <ul>
-        <li><a class="header-link" href="#about">О нас</a></li>
-        <li>
-          <a class="header-link" href="#services&prices">Услуги и цены</a>
-        </li>
-        <li><a class="header-link" href="#our-masters">Мастера</a></li>
-        <li><a class="header-link" href="#contacts">Контакты</a></li>
-      </ul>
-      <ul>
-        <li>
-          <a class="link-tel" href="tel:+380441111111">+38 044 111 11 11</a>
-        </li>
-        <li>
-          <button class="header-button" type="button">онлайн-запись</button>
-        </li>
-      </ul>
+      <div class="conteiner nav">
+        <a class="header-logo" href="./index.html"
+          ><img src="./img/Logo.svg" alt="logo сайта"
+        /></a>
+        <ul class="nav-list">
+          <li><a class="header-link" href="#about">О нас</a></li>
+          <li>
+            <a class="header-link" href="#services&prices">Услуги и цены</a>
+          </li>
+          <li><a class="header-link" href="#our-masters">Мастера</a></li>
+          <li><a class="header-link" href="#contacts">Контакты</a></li>
+        </ul>
+        <ul class="contact-list">
+          <li>
+            <a class="link-tel" href="tel:+380441111111">+38 044 111 11 11</a>
+          </li>
+          <li>
+            <button class="header-button" type="button">онлайн-запись</button>
+          </li>
+        </ul>
+      </div>
     </header>
     <main>
       <section class="hero">
         <div>
-          <ul>
+          <ul class="hero-list">
             <li><a href="" class="hero-link">Instagram</a></li>
             <li><a href="" class="hero-link">Youtube</a></li>
           </ul>
@@ -53,6 +62,7 @@
           </p>
         </div>
       </section>
+      <!--О нас-->
       <section>
         <h2 class="about-title" id="about">О НАС</h2>
         <ul>
@@ -87,6 +97,7 @@
         </p>
         <button class="about-btn" type="button">онлайн-запись</button>
       </section>
+      <!--Услуги и цены-->
       <section>
         <p class="prices-text">Проведи время в компании лучших мастеров</p>
         <h2 class="prices-title" id="services&prices">Услуги и цены</h2>
@@ -128,6 +139,7 @@
         </ul>
         <button class="prices-btn" type="button">онлайн-запись</button>
       </section>
+      <!--Почему приходят к нам-->
       <section class="reasons">
         <ul>
           <li>
@@ -154,6 +166,7 @@
           чем 10 раз прочитать.
         </p>
       </section>
+      <!--Мастера-->
       <section class="masters">
         <p class="masters-pretitle">для настоящих ценителей атмосферы</p>
         <h2 class="masters-title" id="our-masters">Наши мастера</h2>
@@ -190,6 +203,7 @@
           </li>
         </ul>
       </section>
+      <!--Портфолио-->
       <section>
         <h2>Портфолио</h2>
         <p class="portfolio-text">
@@ -230,9 +244,11 @@
           </li>
         </ul>
       </section>
+      <!--Онлайн-запись-->
       <section class="online-sign-up">
         <h2 class="online-sign-up-title">Онлайн-запись</h2>
       </section>
+      <!--Контакты-->
       <section>
         <h2 class="contacts-title" id="contacts">Контакты</h2>
         <address>

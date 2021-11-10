@@ -18,9 +18,39 @@ body {
 }
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+.conteiner {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* Хедер */
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+}
+.contact-list {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
 }
 .header {
   background-color: var(--low-sing-up-background-color);
@@ -32,18 +62,35 @@ a {
   letter-spacing: 0.1em;
   color: var(--header-text-color);
 }
+.header-link:not(:last-child) {
+  margin-right: 40px;
+}
+.header-link:first-child {
+  margin-left: 40px;
+}
+
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-text-color);
 }
 .link-tel {
+  margin-right: 12px;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 1.33;
   color: var(--header-text-color);
 }
+
 .header-button {
+  display: inline-block;
+  border: 1px solid #ff6c00;
+  padding: 12px 20px;
+  border-radius: 25px;
+  min-width: 163px;
+
+  background-color: transparent;
+
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -53,7 +100,11 @@ a {
   color: var(--first-button-color);
 }
 /* hero */
+.hero-list {
+}
 .hero-link {
+  display: block;
+  transform: rotate(-89.83deg);
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
@@ -88,6 +139,7 @@ a {
   letter-spacing: 0.02em;
   color: var(--second-text-color);
 }
+/* О нас */
 .about-title {
   font-weight: 600;
   font-size: 11px;
@@ -220,6 +272,7 @@ a {
   letter-spacing: 0.02em;
   color: var(--accent-text-color);
 }
+/* Портфолио */
 .portfolio-text {
   font-weight: 600;
   font-size: 11px;
@@ -237,6 +290,7 @@ a {
   letter-spacing: 0.05em;
   color: var(--main-title-color);
 }
+/* Контакты */
 .contacts-title {
   font-family: Raleway;
   font-weight: 700;
@@ -265,6 +319,7 @@ a {
   letter-spacing: 0.02em;
   color: var(--second-text-color);
 }
+/* Футер */
 .footer-text {
   font-weight: 600;
   font-size: 11px;
