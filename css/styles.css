@@ -10,7 +10,7 @@
   --header-text-color: #ffffff;
   --accent-text-color: #ff6c00;
 
-  --primary-background-color: #f7f7f7;
+  --primary-background-color: #ffffff;
   --secondary-background-color: #f7f7f7;
   --third-background-color: #191c26;
 }
@@ -54,12 +54,11 @@ button {
   padding-bottom: 130px;
 }
 .btn {
-  display: inline-block;
   border: 1px solid #ff6c00;
-  padding: 12px 20px;
+
   border-radius: 25px;
   min-width: 160px;
-
+  height: 40px;
   background-color: transparent;
 
   font-family: inherit;
@@ -69,12 +68,27 @@ button {
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-text-color);
+  color: var(--first-button-color);
+}
 .pretitle {
+  display: flex;
+  align-items: center;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+.pretitle::before {
+  transition: transform;
+
+  content: "";
+  width: 63px;
+  height: 1px;
+  margin-right: 21px;
 }
 .aftertitle {
   font-size: 18px;
@@ -92,7 +106,6 @@ button {
 /* Хедер */
 .header {
   padding: 32px 0;
-  background-color: var(--third-background-color);
 }
 .header-container {
   display: flex;
@@ -101,6 +114,12 @@ button {
 .header-navigation {
   display: flex;
   align-items: center;
+}
+.header-logo {
+  color: var(--second-title-color);
+}
+.header-logo-icon {
+  fill: currentColor;
 }
 .header-list {
   display: flex;
@@ -141,9 +160,7 @@ button {
 .header-button {
   color: var(--first-button-color);
 }
-.header-button:hover {
-  background-color: var(--accent-text-color);
-}
+
 /* hero */
 
 .hero-container {
@@ -153,11 +170,19 @@ button {
   width: 93px;
 }
 .hero-right {
+  flex-grow: 1;
+  padding-top: 272px;
+  padding-bottom: 206px;
+  padding-left: 96px;
   background-image: linear-gradient(
       rgba(25, 28, 38, 0.2),
       rgba(25, 28, 38, 0.2)
     ),
     url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--secondary-background-color);
 }
 .hero-link {
   font-family: Open Sans;
@@ -176,6 +201,12 @@ button {
   margin-bottom: 20px;
   color: var(--first-text-color);
 }
+.hero-pretitle::before {
+  background-color: rgba(157, 164, 189, 0.6);
+}
+.hero-pretitle:hover:before {
+  background-color: var(--accent-text-color);
+}
 .hero-title {
   margin-bottom: 20px;
   font-family: Raleway;
@@ -191,23 +222,28 @@ button {
   color: var(--second-text-color);
 }
 /* О нас */
+.about {
+  padding-top: 139px;
+  padding-bottom: 121px;
+}
 .about-container {
   display: flex;
 }
 .about-list {
   display: flex;
   margin-right: 64px;
+  flex-shrink: 0;
 }
 .about-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.about-right {
-  width: 500px;
-}
 .about-pretitle {
   margin-bottom: 20px;
   color: var(--second-title-color);
+}
+.about-pretitle::before {
+  background-color: var(--second-title-color);
 }
 .about-title {
   margin-bottom: 20px;
@@ -230,17 +266,18 @@ button {
 }
 /* Цены */
 .prices {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url(../img/price-image.jpg);
+  background-image: url(../img/prices-pic.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #111319;
-  border: 1px solid #000000;
 }
 .prices-pretitle {
   margin-bottom: 20px;
   color: var(--first-text-color);
+}
+.prices-pretitle::before {
+  background-color: var(--first-text-color);
 }
 .prices-title {
   margin-bottom: 44px;
@@ -249,41 +286,85 @@ button {
 .prices-wrap {
   display: flex;
   margin-bottom: 50px;
-  background-image: linear-gradient(
-    rgba(23, 26, 36, 0.2),
-    rgba(23, 26, 36, 0.2)
-  );
 }
 .prices-list {
   width: 50%;
   padding: 30px 40px;
 }
+.prices-list.light {
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
+}
+.prices-list.dark {
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
+}
+
 .prices-item {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 20px;
 }
 .prices-item:last-child {
   margin-bottom: 0;
 }
+.prices-item::before {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  margin-left: 6px;
+  margin-right: 6px;
+}
 .prices-item-text {
   color: var(--second-text-color);
+}
+.prices-item-text.description {
+  order: -1;
 }
 .prices-btn {
   display: block;
   margin: 0 auto;
-  color: var(--second-button-color);
+  color: var(--first-button-color);
 }
 /* Почему приходят к нам */
+.reasons {
+  background-color: var(--primary-background-color);
+}
 .reasons-conteiner {
   display: flex;
 }
-
-.reasons-right {
-  flex-grow: 1;
-  padding-left: 15px;
-  max-width: 460px;
-  margin-left: auto;
+.reasons-left {
+  display: flex;
+  justify-content: center;
+}
+.reasons-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.reasons-item {
+  width: 170px;
+  height: 133px;
+  padding: 20px;
+  background-color: var(--secondary-background-color);
+}
+.reasons-item:nth-child(odd) {
+  margin-right: 30px;
+}
+.reasons-item:nth-child(even) {
+  margin-top: 30px;
+}
+.reasons-right,
+.reasons-left {
+  width: calc(50% - 30px);
 }
 
 .reasons-item-text {
@@ -294,6 +375,8 @@ button {
   color: var(--third-text-color);
 }
 .reasons-count {
+  display: flex;
+  justify-content: center;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
@@ -301,9 +384,20 @@ button {
   letter-spacing: 0.05em;
   color: var(--third-text-color);
 }
-.reasons-pre-title {
+.reasons-count::after {
+  content: "+";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+  color: var(--accent-text-color);
+}
+.reasons-pretitle {
   margin-bottom: 20px;
   color: var(--second-title-color);
+}
+.reasons-pretitle::before {
+  background-color: var(--second-title-color);
 }
 .reasons-title {
   margin-bottom: 20px;
@@ -313,6 +407,9 @@ button {
   color: var(--fourth-text-color);
 }
 /* Мастера */
+.masters {
+  background-color: var(--secondary-background-color);
+}
 .masters-list {
   display: flex;
 }
@@ -328,6 +425,9 @@ button {
 .masters-pretitle {
   margin-bottom: 20px;
   color: var(--second-title-color);
+}
+.masters-pretitle::before {
+  background-color: var(--second-title-color);
 }
 .masters-title {
   margin-bottom: 44px;
@@ -349,6 +449,35 @@ button {
   letter-spacing: 0.02em;
   color: var(--accent-text-color);
 }
+.masters-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.masters-social-item {
+  width: 44px;
+  height: 44px;
+}
+.masters-social-item + .masters-social-item {
+  margin-left: 10px;
+}
+.masters-social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--primary-background-color);
+  color: var(--third-text-color);
+}
+.masters-social-icon {
+  fill: currentColor;
+}
+.masters-social-link:hover,
+.masters-social-link:focus {
+  color: var(--accent-text-color);
+}
 /* Портфолио */
 .visually-hidden {
   position: absolute !important;
@@ -363,6 +492,9 @@ button {
 .portfolio-pretitle {
   margin-bottom: 44px;
   color: var(--third-text-color);
+}
+.portfolio-pretitle::before {
+  background-color: var(--third-text-color);
 }
 .portfolio-list {
   display: flex;
