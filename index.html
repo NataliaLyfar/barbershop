@@ -363,13 +363,20 @@
             </li>
           </ul>
         </div>
-      </section class="section">
+      </section>
+      <section class="section low-section" ><div class="container low">
       <!--Онлайн-запись-->
-      <section class="online-sign-up">
-        <h2 class="online-sign-up-title section-title">Онлайн-запись</h2>
+      <section class="online">
+        <h2 class="online-title section-title">Онлайн-запись</h2>
+        <form action="#">
+          <label class="form-label"><input type="text" class="form-input" placeholder="Имя"></label>
+          <label class="form-label"></label><input type="tel" class="form-input" placeholder="Телефон"></label>
+          <textarea name="coment" id="" placeholder="Сообщение" class="form-textarea"></textarea>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
       </section>
       <!--Контакты-->
-      <section class="contacts section">
+      <section class="contacts">
         <h2 class="contacts-title section-title" id="contacts">Контакты</h2>
         <address class="contacts-address">
           <ul class="contact-list list">
@@ -396,7 +403,8 @@
         </address>
         <p class="contact-text">время работы</p>
         <p class="schedule-text aftertitle">Ежедневно с 9:00 до 22:00</p>
-      </section>
+      </section></div>
+    </section>
     </main>
     <footer class="footer conteiner">
       <p class="footer-copy">&#169;Copyright 2020</p>
@@ -408,8 +416,31 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>
-          <svg class="close-icon" width="15" height="15"><use href="./img/symbol-defs.svg#icon-cross"</svg>
+          <svg class="close-icon" width="18" height="18"><use href="./img/symbol-defs.svg#icon-close"</svg>
         </button>
+        <p class="modal-title">Мы вам перезвоним, оставьте свои данные</p>
+        <form action="#" class="modal-form">
+          <div class="modal-form-field">
+          <label for="name" class="modal-label">Имя</label>
+          <input type="text" id="name" name="name" class="modal-input" placeholder="Имя" required></div>
+          <div class="modal-form-field">
+            <label for="email" class="modal-label">Email</label>
+          <input type="email" name="email" id="email" class="modal-input"placeholder="yourmail@mail.com" ></div>
+          <div class="modal-form-field">
+            <label for="tel" class="modal-label">Tel</label>
+          <input type="tel" name="tel" id="tel" class="modal-input" placeholder="+380111111111" required></div>
+          <div class="modal-form-field">
+            <label for="coment" class="modal-label">Комментарий</label>
+            <textarea name="coment" id="coment" class="modal-textarea" placeholder="Ваш комментарий"></textarea>
+          </div>
+          <div class="modal-form-field">
+            <label for="checkbox" class="modal-label">Соглашаюсь на рассылку и принимаю <a href="">Условия договора</a></label>
+            <input type="checkbox" id="checkbox">
+          </div>
+            
+<button type="submit" class="btn modal-btn">Отправить</button>
+
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
