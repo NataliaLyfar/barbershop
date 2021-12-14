@@ -1,18 +1,18 @@
 :root {
   --main-title-color: #ffffff;
-  --second-title-color: #303030;
+  --third-text-color: #303030;
   --first-text-color: rgba(157, 164, 189, 0.6);
   --second-text-color: #9da4bd;
   --third-text-color: #303030;
   --fourth-text-color: #555555;
   --first-button-color: #ffffff;
-  --second-button-color: #303030;
+  --third-text-color: #303030;
   --header-text-color: #ffffff;
-  --accent-text-color: #ff6c00;
+  --accent-color: #ff6c00;
 
   --primary-background-color: #ffffff;
-  --secondary-background-color: #f7f7f7;
-  --third-background-color: #191c26;
+  --secondary-color: #f7f7f7;
+  --tertiary-color: #191c26;
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -73,8 +73,8 @@ justify-content: center;
 }
 .btn:hover,
 .btn:focus {
-  background-color: var(--accent-text-color);
-  color: var(--first-button-color);
+  background-color: var(--accent-color);
+  color: var(--main-color);
 }
 .pretitle {
   display: flex;
@@ -94,7 +94,7 @@ justify-content: center;
   margin-right: 21px;
 }
 .pretitle:hover::before {
-  background-color: var(--accent-text-color);
+  background-color: var(--accent-color);
 }
 .aftertitle {
   font-size: 18px;
@@ -125,7 +125,7 @@ justify-content: center;
   align-items: center;
 }
 .header-logo {
-  color: var(--second-title-color);
+  color: var(--third-text-color);
 }
 .header-logo-icon {
   fill: currentColor;
@@ -149,7 +149,7 @@ justify-content: center;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-  color: var(--header-text-color);
+  color: var(--main-color);
   
 }
 .header-item:not(:last-child) {
@@ -161,7 +161,7 @@ justify-content: center;
 
 .header-link:hover,
 .header-link:focus, .header-tel:hover, .header-tel:focus {
-  color: var(--accent-text-color);
+  color: var(--accent-color);
 }
 .header-link.current::after {
   position: absolute;
@@ -170,7 +170,7 @@ justify-content: center;
   width: 100%;
   height: 4px;
   border-radius: 10px;
-  background-color: var(--accent-text-color);
+  background-color: var(--accent-color);
   bottom: 28px;
   left: 0;
 }
@@ -210,7 +210,7 @@ justify-content: center;
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: var(--second-title-color);
+  background-color: var(--third-text-color);
   margin: 0 40px;
 }
 
@@ -230,7 +230,7 @@ justify-content: center;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: var(--secondary-background-color);
+  background-color: var(--secondary-color);
 }
 .hero-link {
   transition: color 300ms linear;
@@ -244,7 +244,7 @@ justify-content: center;
 }
 .hero-link:hover,
 .hero-link:focus {
-  color: var(--accent-text-color);
+  color: var(--accent-color);
 }
 .hero-pretitle {
   margin-bottom: 20px;
@@ -255,7 +255,7 @@ justify-content: center;
   background-color: rgba(157, 164, 189, 0.6);
 }
 .hero-pretitle:hover:before {
-  background-color: var(--accent-text-color);
+  background-color: var(--accent-color);
 }
 .hero-title {
   margin-bottom: 20px;
@@ -264,7 +264,7 @@ justify-content: center;
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
-  color: var(--main-title-color);
+  color: var(--main-color);
 }
 .hero-aftertitle {
   max-width: 400px;
@@ -290,14 +290,14 @@ justify-content: center;
 
 .about-pretitle {
   margin-bottom: 20px;
-  color: var(--second-title-color);
+  color: var(--third-text-color);
 }
 .about-pretitle::before {
-  background-color: var(--second-title-color);
+  background-color: var(--third-text-color);
 }
 .about-title {
   margin-bottom: 20px;
-  color: var(--second-title-color);
+  color: var(--third-text-color);
 }
 .about-aftertitle {
   margin-bottom: 20px;
@@ -312,7 +312,7 @@ justify-content: center;
   color: var(--fourth-text-color);
 }
 .about-btn {
-  color: var(--second-button-color);
+  color: var(--third-text-color);
 }
 /* Цены */
 .prices {
@@ -331,7 +331,7 @@ justify-content: center;
 }
 .prices-title {
   margin-bottom: 44px;
-  color: var(--main-title-color);
+  color: var(--main-color);
 }
 .prices-wrap {
   display: flex;
@@ -382,11 +382,11 @@ justify-content: center;
 .prices-btn {
   display: block;
   margin: 0 auto;
-  color: var(--first-button-color);
+  color: var(--main-color);
 }
 /* Почему приходят к нам */
 .reasons {
-  background-color: var(--primary-background-color);
+  background-color: var(--main-color);
 }
 .reasons-conteiner {
   display: flex;
@@ -404,7 +404,7 @@ justify-content: center;
   width: 170px;
   height: 133px;
   padding: 20px;
-  background-color: var(--secondary-background-color);
+  background-color: var(--secondary-color);
 }
 .reasons-item:nth-child(odd) {
   margin-right: 30px;
@@ -440,25 +440,25 @@ justify-content: center;
   font-size: 16px;
   line-height: 1.38;
   text-align: center;
-  color: var(--accent-text-color);
+  color: var(--accent-color);
 }
 .reasons-pretitle {
   margin-bottom: 20px;
-  color: var(--second-title-color);
+  color: var(--third-text-color);
 }
 .reasons-pretitle::before {
-  background-color: var(--second-title-color);
+  background-color: var(--third-text-color);
 }
 .reasons-title {
   margin-bottom: 20px;
-  color: var(--second-title-color);
+  color: var(--third-text-color);
 }
 .reasons-aftertitle {
   color: var(--fourth-text-color);
 }
 /* Мастера */
 .masters {
-  background-color: var(--secondary-background-color);
+  background-color: var(--secondary-color);
 }
 .masters-list {
   display: flex;
@@ -483,7 +483,7 @@ overflow: hidden;
   top: 0;
   left: 0;
    padding: 15px;
-  background-color: var(--accent-text-color);
+  background-color: var(--accent-color);
   width: 100%;
   height: 100%;
   transform: translateY(100%);
@@ -498,14 +498,14 @@ opacity: 0;
 }
 .masters-pretitle {
   margin-bottom: 20px;
-  color: var(--second-title-color);
+  color: var(--third-text-color);
 }
 .masters-pretitle::before {
-  background-color: var(--second-title-color);
+  background-color: var(--third-text-color);
 }
 .masters-title {
   margin-bottom: 44px;
-  color: var(--second-title-color);
+  color: var(--third-text-color);
 }
 .masters-name {
   margin-bottom: 8px;
@@ -521,7 +521,7 @@ opacity: 0;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.02em;
-  color: var(--accent-text-color);
+  color: var(--accent-color);
 }
 .masters-social-list {
   display: flex;
@@ -551,8 +551,8 @@ opacity: 0;
 }
 .masters-social-link:hover,
 .masters-social-link:focus {
-  color: var(--accent-text-color);
-  background-color: var(--third-background-color);
+  color: var(--accent-color);
+  background-color: var(--tertiary-color);
 }
 /* Портфолио */
 .visually-hidden {
@@ -597,7 +597,7 @@ overflow: hidden;
   left: 0;
   padding: 15px;
   transform: scale(0);
-  background-color: var(--accent-text-color);
+  background-color: var(--accent-color);
   opacity: 0;
   overflow: auto;
 }
@@ -608,7 +608,7 @@ overflow: hidden;
 
 .contact-wrap {
 display: flex;
-background-color: var(--third-background-color);
+background-color: var(--tertiary-color);
 }
 
 
@@ -618,7 +618,7 @@ background-color: var(--third-background-color);
   padding: 130px 40px 130px 0;
 }
 .online-title {
-  color: var(--main-title-color);
+  color: var(--main-color);
   margin-bottom: 44px;
 }
 .input-wrap {
@@ -640,7 +640,7 @@ font-size: 14px;
 text-align: left;
 }
 .online-input:focus, .online-input:hover, .online-textarea:hover, .online-textarea:focus {
-  border-color: var(--header-text-color);
+  border-color: var(--main-color);
 }
 .online-input + .online-input {
   margin-left: 30px;
@@ -669,7 +669,7 @@ resize: none;
 .contacts {
   width: calc(50% + 15px);
   padding: 130px 0 130px 100px;
-  background-color: var(--third-background-color);
+  background-color: var(--tertiary-color);
   background-image: url("../img/contacts-bcg.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -680,7 +680,7 @@ resize: none;
 }
 .contacts-title {
   margin-bottom: 40px;
-  color: var(--main-title-color);
+  color: var(--main-color);
 }
 .contacts-link {
   font-size: 18px;
@@ -691,7 +691,7 @@ resize: none;
   color: var(--second-text-color);
 }
 .contacts-link:hover, .contacts-link:focus {
-  color: var(--accent-text-color);
+  color: var(--accent-color);
 }
 .contacts-item:not(:last-child) .contacts-link {
   text-decoration: none;
@@ -703,7 +703,7 @@ resize: none;
   margin-top: 70px;
   margin-bottom: 20px;
   
-  color: var(--header-text-color);
+  color: var(--main-color);
 }
 .contact-text::before {
   transition: transform 300ms linear;
@@ -732,7 +732,7 @@ resize: none;
   width: 60px;
   height: 1px;
   
-  background-color: var(--second-title-color);
+  background-color: var(--third-text-color);
   margin-right: 40px;
 }
 .footer-item:first-child {
@@ -749,7 +749,7 @@ margin-right: 40px;
 }
 .footer-link:hover,
 .footer-link:focus {
-  color: var(--accent-text-color);
+  color: var(--accent-color);
 }
 .backdrop {
   transition: transform 300ms linear, opacity 300ms linear, visibility 300ms linear;
@@ -766,7 +766,7 @@ margin-right: 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  background-color: var(--primary-background-color);
+  background-color: var(--main-color);
   width: 500px;
   min-height: 500px;
   border-radius: 10px;
@@ -781,7 +781,7 @@ margin-right: 40px;
   height: 30px;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid var(--second-button-color);
+  border: 1px solid var(--third-text-color);
   position: absolute;
   top: 10px;
   right: 10px;
@@ -790,8 +790,8 @@ margin-right: 40px;
 justify-content: center;
 }
 .close-btn:hover {
-  fill: var(--accent-text-color);
-  border: 1px solid var(--accent-text-color);
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 .is-hidden {
   visibility: hidden;
@@ -805,7 +805,7 @@ justify-content: center;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.3;
-  color: var(--second-title-color);
+  color: var(--third-text-color);
   text-align: center;
   margin-bottom: 15px;
 }
@@ -828,7 +828,7 @@ text-align: left;
 .modal-input:focus,
 .modal-textarea:hover,
 .modal-textarea:focus {
-  border: 1px solid var(--accent-text-color);
+  border: 1px solid var(--accent-color);
 }
 .modal-input::placeholder {
   font-size: 14px;
@@ -847,7 +847,7 @@ fill: currentColor;
 }
 .modal-input:hover + .modal-icon,
 .modal-input:focus + .modal-icon {
-  fill: var(--accent-text-color);
+  fill: var(--accent-color);
 }
 .modal-btn {
   margin-left: auto;
@@ -855,7 +855,7 @@ fill: currentColor;
 }
 .modal-label {
   font-size: 14px;
-  color: var(--second-title-color);
+  color: var(--third-text-color);
   margin-bottom: 5px;
   display: block;
 }
@@ -877,7 +877,7 @@ margin: 20px 0 30px;
 }
 .modal-check-text {
   font-size: 14px;
-  color: var(--second-title-color);
+  color: var(--third-text-color);
   
   display: flex;
 }
@@ -887,11 +887,11 @@ margin: 20px 0 30px;
   height: 15px;
   border-radius: 2px;
   display: block;
-  border: 2px solid var(--third-background-color);
+  border: 2px solid var(--tertiary-color);
   margin-right: 5px;
 }
 .modal-check:checked + .modal-check-text::before {
-  background-color: var(--accent-text-color);
+  background-color: var(--accent-color);
   background-image: url(../img/icon-check.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -899,7 +899,7 @@ margin: 20px 0 30px;
   border: none;
 }
 .policy-link:hover, .policy-link:focus {
-color: var(--accent-text-color);
+color: var(--accent-color);
 }
 .policy-link {
   color: inherit;

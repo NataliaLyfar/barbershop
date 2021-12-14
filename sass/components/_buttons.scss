@@ -1,0 +1,23 @@
+.btn {
+    @extend %flex-center-style;
+    @include transition(background-color);
+    @include transition(color);
+    border: 1px solid $accent-color;
+    padding: 0;
+    border-radius: 25px;
+    min-width: 160px;
+    height: 40px;
+    background-color: transparent;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      color: $main-color;
+    }
+  }
+  

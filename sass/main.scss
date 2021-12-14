@@ -1,1 +1,11 @@
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+
 @import "./components/commonstyle";
+@import "./components/container";
+@import "./components/sections";
+@import "./components/section-title";
+@import "./components/pretitle";
+@import "./components/aftertitle";
+@import "./components/buttons";
