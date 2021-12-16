@@ -1,0 +1,44 @@
+.portfolio__pretitle {
+    margin-bottom: 44px;
+    color: $second-text-color;
+    &::before {
+    background-color: $second-text-color;
+      }
+  }
+  
+  .portfolio__list {
+    display: flex;
+  }
+  .portfolio__item {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &:hover .overlay {
+    transform: scale(100%);
+    opacity: 1;
+    }
+  }
+  
+  .thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  overflow: hidden;
+  }
+  .overlay {
+    @include transition (transform);
+    @include transition (opacity); 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    transform: scale(0);
+    background-color: $accent-color;
+    opacity: 0;
+    overflow: auto;
+  }
+  
+  

@@ -1,0 +1,51 @@
+.contacts {
+    width: calc(50% + 15px);
+    padding: 130px 0 130px 100px;
+    background-color: $tertiary-color;
+    background-image: url("../img/contacts-bcg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .address {
+    width: 270px;
+  }
+  .contacts__title {
+    margin-bottom: 40px;
+    color: $main-color;
+  }
+  .contacts__link {
+    font-size: 18px;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    text-decoration-line: underline;
+    color: $first-text-color;
+    &:hover, &:focus {
+    color: $accent-color;
+    }
+  }
+  
+  .contacts__item:not(:last-child) {
+    margin-bottom: 20px;
+    & .contacts-link {
+    text-decoration: none;
+    }
+  }
+  .contact__text {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    color: $main-color;
+    &::before {
+    @include transition (transform);
+    content: " ";
+    margin-right: 20px;
+    width: 60px;
+    height: 1px;
+    background-color:rgba( $first-text-color, 0.6);
+    }
+  }
+  
+  .schedule-text {
+    color: $first-text-color;
+  }

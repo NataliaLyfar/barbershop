@@ -7,9 +7,9 @@
   }
   .prices__pretitle {
     margin-bottom: 20px;
-    color: $first-text-color;
+    color:rgba( $first-text-color, 0.6);
     &::before {
-        background-color: $first-text-color;
+        background-color:rgba( $first-text-color, 0.6);
       }
   }
   
@@ -59,7 +59,7 @@
   }
   
   .prices__item-text {
-    color: $second-text-color;
+    color: $first-text-color;
     &.description {
         order: -1;
       }

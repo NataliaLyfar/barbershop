@@ -1,52 +1,53 @@
 .masters {
-    background-color: var(--secondary-color);
+  background-color: $secondary-color;
   }
-  .masters-list {
-    display: flex;
-  }
-  .masters-item {
-    
-    flex-basis: calc((100% - 2 * 30px) / 3);
-  
-  }
-  .masters-item:not(:last-child) {
+.masters-list {
+  display: flex;
+}
+.masters-item {
+  flex-basis: calc((100% - 2 * 30px) / 3);
+  &:not(:last-child) {
     margin-right: 30px;
   }
-  .overlay-thumb {
-    position: relative;
-    width: 100%;
-    height: auto;
-  overflow: hidden;
-  }
-  .masters-overlay {
-    transition: opacity 300ms linear, transform 300ms linear;
-    position: absolute; 
-    top: 0;
-    left: 0;
-     padding: 15px;
-    background-color: var(--accent-color);
-    width: 100%;
-    height: 100%;
-    transform: translateY(100%);
-  opacity: 0;
-  }
-  .masters-item:hover .masters-overlay {
+  &:hover .masters-overlay {
     transform: translateY(0);
     opacity: 1;
   }
-  .masters-item-content {
+}
+.overlay-thumb {
+  position: relative;
+  width: 100%;
+  height: auto;
+overflow: hidden;
+}
+.masters__overlay {
+  @include transition (opacity);
+  @include transition (transform);
+  position: absolute; 
+  top: 0;
+  left: 0;
+    padding: 15px;
+  background-color: $accent-color;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+opacity: 0;
+}
+  
+  .masters__item-content {
     padding-top: 30px;
   }
-  .masters-pretitle {
+  .masters__pretitle {
     margin-bottom: 20px;
-    color: var(--third-text-color);
+    color: $second-text-color;
+    &::before {
+      background-color: $second-text-color;
+    }
   }
-  .masters-pretitle::before {
-    background-color: var(--third-text-color);
-  }
-  .masters-title {
+  
+  .masters__title {
     margin-bottom: 44px;
-    color: var(--third-text-color);
+    color: $second-text-color;
   }
   .masters-name {
     margin-bottom: 8px;
@@ -54,44 +55,14 @@
     line-height: 1.39;
     text-align: center;
     letter-spacing: 0.02em;
-    color: var(--third-text-color);
+    color: $second-text-color;
   }
-  .masters-position {
+  .masters__position {
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.02em;
-    color: var(--accent-color);
+    color: $accent-color;
   }
-  .masters-social-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .masters-social-item {
-    width: 44px;
-    height: 44px;
-  }
-  .masters-social-item + .masters-social-item {
-    margin-left: 10px;
-  }
-  .masters-social-link {
-    transition: background-color 300ms linear, color 300ms linear;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: var(--primary-background-color);
-    color: var(--third-text-color);
-  }
-  .masters-social-icon {
-    fill: currentColor;
-  }
-  .masters-social-link:hover,
-  .masters-social-link:focus {
-    color: var(--accent-color);
-    background-color: var(--tertiary-color);
-  }
+  

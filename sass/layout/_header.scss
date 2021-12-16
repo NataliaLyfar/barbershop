@@ -12,65 +12,15 @@
     display: flex;
     align-items: center;
   }
-  .header__logo {
-    color: $third-text-color;
-  }
-  .header__logo-icon {
-    fill: currentColor;
-  }
-  .nav__list {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav__item:not(:last-child) {
-    margin-right: 40px;
-  }
-  .nav__item:first-child {
-    margin-left: 70px;
-  }
-  .nav__link {
-   position: relative;
-    transition: color 300ms linear;
-    display: block;
-    padding: 48px 0;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
-    color: $main-color;
-    &:hover,
-    &:focus {
-    color: $accent-color;
-  }
-  &.current::after {
-    position: absolute;
-    
-    content: "";
-    width: 100%;
-    height: 4px;
-    border-radius: 10px;
-    background-color: $accent-color;
-    bottom: 28px;
-    left: 0;
-  }
-}
+
 .header__contacts {
     display: flex;
     margin-left: auto;
     align-items: center;
   }
   .header__contacts--tel {
+   @extend %primary-link-style; 
     margin-right: 40px;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 1.33;
-    color: $main-color;
-    &:hover,
-    &:focus {
-    color: $accent-color;
-  }
   }
   .header__button {
     color: $main-color;

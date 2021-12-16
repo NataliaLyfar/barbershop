@@ -1,4 +1,4 @@
-.btn {
+.btn, .social__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,6 +39,17 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .container {
@@ -116,6 +127,48 @@ img {
 .btn:hover, .btn:focus {
   background-color: #ff6c00;
   color: #ffffff;
+}
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social__item {
+  width: 44px;
+  height: 44px;
+}
+
+.social__item + .social__item {
+  margin-left: 10px;
+}
+
+.social__link {
+  -webkit-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+  -webkit-transition: color 300ms linear;
+  transition: color 300ms linear;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  color: #303030;
+}
+
+.social__link:hover, .social__link:focus {
+  color: #ff6c00;
+  background-color: #191c26;
+}
+
+.social__icon {
+  fill: currentColor;
 }
 
 .header {
@@ -569,5 +622,149 @@ img {
 
 .reasons__aftertitle {
   color: #555555;
+}
+
+.masters {
+  background-color: #f7f7f7;
+}
+
+.masters-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.masters-item {
+  -ms-flex-preferred-size: calc((100% - 2 * 30px) / 3);
+      flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.masters-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.masters-item:hover .masters-overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.overlay-thumb {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.masters__overlay {
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  background-color: #ff6c00;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+}
+
+.masters__item-content {
+  padding-top: 30px;
+}
+
+.masters__pretitle {
+  margin-bottom: 20px;
+  color: #303030;
+}
+
+.masters__pretitle::before {
+  background-color: #303030;
+}
+
+.masters__title {
+  margin-bottom: 44px;
+  color: #303030;
+}
+
+.masters-name {
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+
+.masters__position {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
+}
+
+.portfolio__pretitle {
+  margin-bottom: 44px;
+  color: #303030;
+}
+
+.portfolio__pretitle::before {
+  background-color: #303030;
+}
+
+.portfolio__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portfolio__item {
+  -ms-flex-preferred-size: calc((100% - 3 * 30px) / 4);
+      flex-basis: calc((100% - 3 * 30px) / 4);
+}
+
+.portfolio__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.portfolio__item:hover .overlay {
+  -webkit-transform: scale(100%);
+          transform: scale(100%);
+  opacity: 1;
+}
+
+.thumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.overlay {
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background-color: #ff6c00;
+  opacity: 0;
+  overflow: auto;
 }
 /*# sourceMappingURL=main.css.map */
