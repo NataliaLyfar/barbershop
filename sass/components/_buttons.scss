@@ -2,6 +2,7 @@
     @extend %flex-center-style;
     @include transition(background-color);
     @include transition(color);
+    @include font (12px, 600, 1.33, 0.09em);
     border: 1px solid $accent-color;
     padding: 0;
     border-radius: 25px;
@@ -9,10 +10,6 @@
     height: 40px;
     background-color: transparent;
     font-family: inherit;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.09em;
     text-transform: uppercase;
     &:hover,
     &:focus {

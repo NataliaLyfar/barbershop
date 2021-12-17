@@ -1,10 +1,7 @@
 .pretitle {
+  @include font (11px, 600, 1.36, 0.1em);
 display: flex;
 align-items: center;
-font-weight: 600;
-font-size: 11px;
-line-height: 1.36;
-letter-spacing: 0.1em;
 text-transform: uppercase;
 &::before {
     transition: transform 300ms linear;

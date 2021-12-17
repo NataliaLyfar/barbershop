@@ -1,19 +1,40 @@
 .about {
+  padding: 84px 0;
+  @media screen and (min-width:$tablet) {
+    padding: 100px 0;
+  }
+  @media screen and (min-width:$desktop){
     padding-top: 139px;
     padding-bottom: 121px;
+  }
   }
   .about__container {
     display: flex;
   }
   .about__list {
+    display: none;
+    @media screen and (min-width:$tablet) {
+display: block;
+margin-right: 30px;
+flex-shrink: 0;
+    }
+    @media screen and (min-width:$desktop) {
     display: flex;
     margin-right: 64px;
     flex-shrink: 0;
+    }
   }
   .about__item:not(:last-child) {
+    @media screen and (min-width:$tablet) {
+    margin-bottom: 30px;
+    }
+   @media screen and (min-width:$desktop) {
     margin-right: 30px;
   }
-  
+}
+.about--right {
+  flex-grow: 1;
+}
   .about__pretitle {
     margin-bottom: 20px;
     color: $second-text-color;
@@ -32,10 +53,8 @@
     text-align: left;
   }
   .about__text {
+    @include font (14px, 400, 1.86, 0.02em);
     margin-bottom: 44px;
-    font-size: 14px;
-    line-height: 1.86;
-    letter-spacing: 0.02em;
     color: $third-text-color;
   }
   .about__btn {
