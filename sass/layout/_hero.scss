@@ -57,7 +57,7 @@
     color:rgba( $first-text-color, 0.6);
     &::before {
     transition: background-color 300ms linear;
-    background-color: rgba(157, 164, 189, 0.6);
+    background-color: rgba($first-text-color, 0.6);
   }
     &:hover:before {
     background-color: $accent-color;
