@@ -82,20 +82,32 @@
         <div class="container about__container">
           <ul class="about__list">
             <li class="about__item">
-              <img
-              srcset="./img/about-tablet-1-min.jpg 1x, ./img/about-tablet-1@2x-min.jpg 2x"
-                src="./img/about-tablet-1-min.jpg"
-                alt="Барбер бреет бороду"
-                width="330"
-              />
+              <picture>
+                <source srcset="./img/about-desktop-1-min.jpg 1x, ./img/about-desktop-1@2x-min.jpg 2x"
+                media="(min-width:$desktop)"
+                 >
+                <source srcset="./img/about-tablet-1-min.jpg 1x, ./img/about-tablet-1@2x-min.jpg 2x"
+               media="(min-width:$tablet)"
+                >
+                <img
+                  src="./img/about-desktop-1-min.jpg"
+                  alt="Барбер бреет бороду"
+                />
+              </picture>
             </li>
             <li class="about__item">
-              <img
-              srcset="./img/about-tablet-2-min.jpg 1x, ./img/about-tablet-2@2x-min.jpg 2x"
-                src="./img/about-tablet-2-min.jpg"
-                alt="Барбер бреет бороду"
-                width="330"
-              />
+              <picture>
+                <source srcset="./img/about-desktop-2-min.jpg 1x, ./img/about-desktop-2@2x-min.jpg 2x"
+                media="(min-width:$desktop)"
+                 >
+                <source srcset="./img/about-tablet-2-min.jpg 1x, ./img/about-tablet-2@2x-min.jpg 2x"
+               media="(min-width:$tablet)"
+                >
+                <img
+                  src="./img/about-desktop-2-min.jpg"
+                  alt="Барбер бреет затылок"
+                />
+              </picture>
             </li>
           </ul>
         <div class="about--right">
@@ -219,12 +231,21 @@
           <ul class="masters__list">
             <li class="masters__item">
               <div class="overlay-thumb">
-              <img
-                src="img/master-1.jpg"
-                alt="Мастер подбривает затылок"
-                width="370"
-                height="346"
-              />
+                <picture>
+                  <source srcset="./img/master-1-desktop-min.jpg 1x, ./img/master-1-desktop-1@2x-min.jpg 2x"
+                  media="(min-width:$desktop)"
+                   >
+                  <source srcset="./img/master-1-tablet-min.jpg 1x, ./img/master-1-tablet-1@2x-min.jpg 2x"
+                 media="(min-width:$tablet)"
+                  >
+                  <source srcset="./img/master-1-mobile-min.jpg 1x, ./img/master-1-mobile-1@2x-min.jpg 2x"
+                 media="(min-width:$mobile)"
+                  >
+                  <img
+                    src="./img/master-1-desktop-min.jpg"
+                    alt="Мастер подбривает затылок"
+                  />
+                </picture>
               <div class="masters__overlay">
                 <p class="pretitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, aliquam. Temporibus, laudantium maxime. Nisi voluptatum voluptates dicta nostrum provident fugiat?</p>
               </div></div>
@@ -249,12 +270,22 @@
             </li>
             <li class="masters__item">
               <div class="overlay-thumb">
-              <img
-                src="img/master-2.jpg"
-                alt="Мастер подбривает височную часть"
-                width="370"
-                height="346"
-              /><div class="masters__overlay">
+                <picture>
+                  <source srcset="./img/master-2-desktop-min.jpg 1x, ./img/master-2-desktop-1@2x-min.jpg 2x"
+                  media="(min-width:$desktop)"
+                   >
+                  <source srcset="./img/master-2-tablet-min.jpg 1x, ./img/master-2-tablet-1@2x-min.jpg 2x"
+                 media="(min-width:$tablet)"
+                  >
+                  <source srcset="./img/master-2-mobile-min.jpg 1x, ./img/master-2-mobile-1@2x-min.jpg 2x"
+                 media="(min-width:$mobile)"
+                  >
+                  <img
+                    src="./img/master-2-desktop-min.jpg"
+                    alt="Мастер подбривает височную часть"
+                  />
+                </picture>
+             <div class="masters__overlay">
                 <p class="pretitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, aliquam. Temporibus, laudantium maxime. Nisi voluptatum voluptates dicta nostrum provident fugiat?</p>
               </div></div>
               <div class="masters__item-content">
@@ -278,12 +309,22 @@
             </li>
             <li class="masters__item">
               <div class="overlay-thumb">
-              <img
-                src="img/master-3.jpg"
-                alt="Мастер вібривает узор"
-                width="370"
-                height="346"
-              /><div class="masters__overlay">
+                <picture>
+                  <source srcset="./img/master-3-desktop-min.jpg 1x, ./img/master-3-desktop-1@2x-min.jpg 2x"
+                  media="(min-width:$desktop)"
+                   >
+                  <source srcset="./img/master-3-tablet-min.jpg 1x, ./img/master-3-tablet-1@2x-min.jpg 2x"
+                 media="(min-width:$tablet)"
+                  >
+                  <source srcset="./img/master-3-mobile-min.jpg 1x, ./img/master-3-mobile-1@2x-min.jpg 2x"
+                 media="(min-width:$mobile)"
+                  >
+                  <img
+                    src="./img/master-3-desktop-min.jpg"
+                    alt="Мастер выбривает узор"
+                  />
+                </picture>
+              <div class="masters__overlay">
                 <p class="pretitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, aliquam. Temporibus, laudantium maxime. Nisi voluptatum voluptates dicta nostrum provident fugiat?</p>
               </div></div>
               <div class="masters__item-content">
@@ -318,46 +359,85 @@
           <ul class="portfolio__list">
             <li class="portfolio__item">
               <div class="thumb">
-              <img
-                src="./img/portfolio-1.jpg"
-                alt="Барбер делает прическу"
-                width="270"
-                height="360"
-              />
+                <picture>
+                  <source srcset="./img/portfolio-1-desktop-min.jpg 1x, ./img/portfolio-1-desktop-1@2x-min.jpg 2x"
+                  media="(min-width:$desktop)"
+                   >
+                  <source srcset="./img/portfolio-1-tablet-min.jpg 1x, ./img/portfolio-1-tablet-1@2x-min.jpg 2x"
+                 media="(min-width:$tablet)"
+                  >
+                  <source srcset="./img/portfolio-1-mobile-min.jpg 1x, ./img/portfolio-1-mobile-1@2x-min.jpg 2x"
+                 media="(min-width:$mobile)"
+                  >
+                  <img
+                    src="./img/portfolio-1-desktop-min.jpg"
+                    alt="Барбер делает прическу"
+                  />
+                </picture>
               <div class="overlay">
                 <p class="aftertitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste sit est commodi quibusdam distinctio veritatis quo dolor animi eligendi, accusamus cumque possimus consequuntur. Nam, cumque quibusdam tempore ab fugit laudantium asperiores quam ut quaerat. Illo minima amet quis consectetur blanditiis architecto suscipit? Magni porro eveniet placeat deserunt nisi et ducimus dolore dignissimos. Distinctio earum velit doloremque quasi adipisci deleniti unde omnis, voluptatem vero explicabo tempora, tenetur ipsam praesentium officiis accusamus iure beatae modi ad voluptate commodi? Sint dolores ut animi.</p>
               </div></div>
             </li>
             <li class="portfolio__item">
               <div class="thumb">
-              <img
-                src="./img/portfolio-2.jpg"
-                alt="Барбер бреет бороду"
-                width="270"
-                height="360"
-              /><div class="overlay">
+                <picture>
+                  <source srcset="./img/portfolio-2-desktop-min.jpg 1x, ./img/portfolio-2-desktop-1@2x-min.jpg 2x"
+                  media="(min-width:$desktop)"
+                   >
+                  <source srcset="./img/portfolio-2-tablet-min.jpg 1x, ./img/portfolio-2-tablet-1@2x-min.jpg 2x"
+                 media="(min-width:$tablet)"
+                  >
+                  <source srcset="./img/portfolio-2-mobile-min.jpg 1x, ./img/portfolio-2-mobile-1@2x-min.jpg 2x"
+                 media="(min-width:$mobile)"
+                  >
+                  <img
+                    src="./img/portfolio-2-desktop-min.jpg"
+                    alt="Барбер бреет бороду"
+                  />
+                </picture>
+              <div class="overlay">
                 <p class="aftertitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate tempora perferendis est laudantium id, accusamus error repellat quaerat natus maiores, iste perspiciatis nisi praesentium quod quasi cum quos! Molestiae cumque similique quasi libero quidem deserunt doloribus aliquid. Nisi velit enim quasi sit debitis deserunt quod maxime expedita sint recusandae accusantium consequuntur nostrum optio quas, unde natus. Ratione perferendis nisi obcaecati, animi, asperiores vel molestiae aliquam neque voluptas accusamus vitae facere quae tempore tempora quaerat provident esse quasi. Illo, repudiandae laboriosam?</p>
               </div></div>
             </li>
             <li class="portfolio__item">
               <div class="thumb">
-              <img
-                src="./img/portfolio-3.jpg"
-                alt="Барбер промокает лицо салфеткой"
-                width="270"
-                height="360"
-              /><div class="overlay">
+                <picture>
+                  <source srcset="./img/portfolio-3-desktop-min.jpg 1x, ./img/portfolio-3-desktop-1@2x-min.jpg 2x"
+                  media="(min-width:$desktop)"
+                   >
+                  <source srcset="./img/portfolio-3-tablet-min.jpg 1x, ./img/portfolio-3-tablet-1@2x-min.jpg 2x"
+                 media="(min-width:$tablet)"
+                  >
+                  <source srcset="./img/portfolio-3-mobile-min.jpg 1x, ./img/portfolio-3-mobile-1@2x-min.jpg 2x"
+                 media="(min-width:$mobile)"
+                  >
+                  <img
+                    src="./img/portfolio-3-desktop-min.jpg"
+                    alt="Барбер промокает лицо салфеткой"
+                  />
+                </picture>
+              <div class="overlay">
                 <p class="aftertitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cupiditate a voluptas beatae illum molestias, inventore quaerat qui tempora debitis eos praesentium repellendus deserunt laborum non quae quasi quos iusto doloribus alias voluptates! Dicta odio repellat aut, harum, nesciunt sapiente ipsa dolorem eaque maxime vero reprehenderit aperiam, voluptate architecto. Delectus, sequi quo! Saepe debitis possimus sunt fugiat assumenda perferendis voluptatum itaque a, libero est ex nobis provident repellat voluptatibus ipsa, odio quam, officia sequi non. Reprehenderit optio quam laborum doloremque.</p>
               </div></div>
             </li>
             <li class="portfolio__item">
               <div class="thumb">
-              <img
-                src="./img/portfolio-4.jpg"
-                alt="Барбер выбривает затылок"
-                width="270"
-                height="360"
-              /><div class="overlay">
+                <picture>
+                  <source srcset="./img/portfolio-4-desktop-min.jpg 1x, ./img/portfolio-4-desktop-1@2x-min.jpg 2x"
+                  media="(min-width:$desktop)"
+                   >
+                  <source srcset="./img/portfolio-4-tablet-min.jpg 1x, ./img/portfolio-4-tablet-1@2x-min.jpg 2x"
+                 media="(min-width:$tablet)"
+                  >
+                  <source srcset="./img/portfolio-4-mobile-min.jpg 1x, ./img/portfolio-4-mobile-1@2x-min.jpg 2x"
+                 media="(min-width:$mobile)"
+                  >
+                  <img
+                    src="./img/portfolio-4-desktop-min.jpg"
+                    alt="Барбер выбривает затылок"
+                  />
+                </picture>
+              <div class="overlay">
                 <p class="aftertitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vero culpa laborum nam vel debitis non repudiandae! Expedita doloribus nobis dolor? Rerum amet voluptatem sunt asperiores aliquam soluta quas repellendus, quibusdam dolores. Perspiciatis minus molestiae, necessitatibus, ducimus cupiditate adipisci repellendus qui eum quod magnam numquam? Quas ea nisi sapiente quis maiores. Placeat nisi error iusto explicabo quas cum atque, tempore, doloremque incidunt adipisci aspernatur ullam facere quod veniam eius minima nesciunt quis quo nihil harum blanditiis? Adipisci voluptatem possimus neque.</p>
               </div></div>
             </li>

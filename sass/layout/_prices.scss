@@ -7,7 +7,18 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/prices-mobile@2x-min.png");
     }
-    
+    @media screen and (min-width: 481px) {
+      background-image: url("../img/prices-tablet-min.png");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/prices-tablet@2x-min.png");
+      }
+    }
+    @media screen and (min-width: 769px) {
+      background-image: url("../img/prices-desktop-min.png");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/prices-desktop@2x-min.png");
+      }
+    }
   }
   .prices__pretitle {
     margin-bottom: 20px;

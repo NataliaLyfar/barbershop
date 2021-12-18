@@ -471,8 +471,8 @@ img {
   padding-top: 272px;
   padding-bottom: 206px;
   padding-left: 96px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../img/hero-mobile-min");
-  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../img/hero-mobile-min");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../img/hero-mobile-min.jpg");
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../img/hero-mobile-min.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -649,6 +649,26 @@ img {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .prices {
     background-image: url("../img/prices-mobile@2x-min.png");
+  }
+}
+@media screen and (min-width: 481px) {
+  .prices {
+    background-image: url("../img/prices-tablet-min.png");
+  }
+}
+@media screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+  .prices {
+    background-image: url("../img/prices-tablet@2x-min.png");
+  }
+}
+@media screen and (min-width: 769px) {
+  .prices {
+    background-image: url("../img/prices-desktop-min.png");
+  }
+}
+@media screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .prices {
+    background-image: url("../img/prices-desktop@2x-min.png");
   }
 }
 
@@ -1071,10 +1091,40 @@ img {
   width: calc(50% + 15px);
   padding: 130px 0 130px 100px;
   background-color: #191c26;
-  background-image: url("../img/contacts-bcg.png");
+  background-image: url("../img/contacts-mobile-min.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .contacts {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../img/contacts-mobile@2x-min.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../img/contacts-mobile@2x-min.jpg");
+  }
+}
+@media (min-width: 481px) {
+  .contacts {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../img/contacts-tablet-min.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../img/contacts-tablet-min.jpg");
+  }
+}
+@media (min-width: 481px) and (min-device-pixel-ratio: 2), (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 481px) and (min-resolution: 192dpi), (min-width: 481px) and (min-resolution: 2dppx) {
+  .contacts {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 247, 247, 0.4)), to(rgba(247, 247, 247, 0.4))), url("../img/contacts-tablet@2x-min.jpg");
+    background-image: linear-gradient(rgba(247, 247, 247, 0.4), rgba(247, 247, 247, 0.4)), url("../img/contacts-tablet@2x-min.jpg");
+  }
+}
+@media (min-width: 769px) {
+  .contacts {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../img/contacts-desktop-min.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../img/contacts-desktop-min.jpg");
+  }
+}
+@media (min-width: 769px) and (min-device-pixel-ratio: 2), (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 769px) and (min-resolution: 192dpi), (min-width: 769px) and (min-resolution: 2dppx) {
+  .contacts {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../img/contacts-desktop@2x-min.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../img/contacts-desktop@2x-min.jpg");
+  }
 }
 
 .address {

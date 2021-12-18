@@ -39,7 +39,7 @@
         rgba($tertiary-color, 0.2),
         rgba($tertiary-color, 0.2)
       ),
-      url("../img/hero-mobile-min");
+      url("../img/hero-mobile-min.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -48,7 +48,6 @@
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
         rgba($tertiary-color, 0.2)), url("../img/hero-mobile@2x-min.jpg");
     }
-  
     @media (min-width:481px) {
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
         rgba($tertiary-color, 0.2)), url("../img/hero-tablet-min.jpg");
