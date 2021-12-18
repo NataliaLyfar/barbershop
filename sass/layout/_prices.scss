@@ -1,9 +1,13 @@
 .prices {
-    background-image: url(../img/prices-pic.png);
+    background-image: url("../img/prices-mobile-min.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #111319;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/prices-mobile@2x-min.png");
+    }
+    
   }
   .prices__pretitle {
     margin-bottom: 20px;
