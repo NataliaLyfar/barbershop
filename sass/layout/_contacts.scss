@@ -1,6 +1,8 @@
 .contacts {
+  @media screen and (min-width:$tablet) {
     width: calc(50% + 15px);
-    padding: 130px 0 130px 100px;
+    padding: 130px 0 130px 100px; 
+  }
     background-color: $tertiary-color;
     background-image: url("../img/contacts-mobile-min.png");
     background-repeat: no-repeat;
@@ -8,37 +10,39 @@
     background-size: cover;
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
-        rgba($tertiary-color, 0.2)), url("../img/contacts-mobile@2x-min.jpg");
+        rgba($tertiary-color, 0.2)), url("../img/contacts-mobile@2x-min.png");
     }
     @media (min-width:481px) {
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
-        rgba($tertiary-color, 0.2)), url("../img/contacts-tablet-min.jpg");
+        rgba($tertiary-color, 0.2)), url("../img/contacts-tablet-min.png");
   @media (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) { 
   background-image: linear-gradient(rgba($secondary-color, 0.4),
-   rgba($secondary-color, 0.4)), url("../img/contacts-tablet@2x-min.jpg");
+   rgba($secondary-color, 0.4)), url("../img/contacts-tablet@2x-min.png");
   }
   }  
     @media (min-width:769px) {
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
-        rgba($tertiary-color, 0.2)), url("../img/contacts-desktop-min.jpg");
+        rgba($tertiary-color, 0.2)), url("../img/contacts-desktop-min.png");
       @media (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx)  {
         background-image: linear-gradient(rgba($tertiary-color, 0.2),
-        rgba($tertiary-color, 0.2)), url("../img/contacts-desktop@2x-min.jpg");
+        rgba($tertiary-color, 0.2)), url("../img/contacts-desktop@2x-min.png");
       }
   }
   }
   .address {
-    width: 270px;
+    margin-bottom: 44px;
+    // width: 270px;
   }
   .contacts__title {
     margin-bottom: 40px;
     color: $main-color;
+    text-align: center
   }
   .contacts__link {
     @include font (18px, 400, 1.67, 0.02em);
@@ -52,12 +56,11 @@
   
   .contacts__item:not(:last-child) {
     margin-bottom: 20px;
-    & .contacts-link {
+    & .contacts__link {
     text-decoration: none;
     }
   }
   .contact__text {
-    margin-top: 70px;
     margin-bottom: 20px;
     color: $main-color;
     &::before {
@@ -71,5 +74,6 @@
   }
   
   .schedule-text {
+    @include font (18px, 400, 1.67, 0.02em);
     color: $first-text-color;
   }

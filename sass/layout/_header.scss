@@ -14,9 +14,12 @@
   }
 
 .header__contacts {
+  display: none;
+  @media screen and (min-width:$tablet) {
     display: flex;
     margin-left: auto;
     align-items: center;
+  }
   }
   .header__contacts--tel {
    @extend %primary-link-style; 

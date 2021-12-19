@@ -1,22 +1,22 @@
 .reasons {
     background-color: $main-color;
   }
-  .reasons__conteiner {
+  .reasons__container {
     display: flex;
+    flex-direction: column-reverse;
   }
   .reasons--left {
     display: flex;
     justify-content: center;
   }
   .reasons__list {
-    width: 370px;
     display: flex;
     flex-wrap: wrap;
   }
   .reasons__item {
-    width: 170px;
+    width: 193px;
     height: 133px;
-    padding: 20px;
+    padding: 20px 36px;
     background-color: $secondary-color;
     &:nth-child(odd) {
         margin-right: 30px;
@@ -24,11 +24,27 @@
       &:nth-child(even) {
         margin-top: 30px;
       }
+      &:last-child {
+        padding: 20px 30px;
+      }
+      @media screen and (min-width:$tablet) {
+        width: 210px;
+        padding: 20px 44px;
+        &:last-child {
+          padding: 20px 40px;
+        }
+      }
+    @media screen and (min-width:$desktop) {
+      width: 170px;
+      padding: 20px;
+    }
   }
   
   .reasons--right,
   .reasons--left {
+    @media screen and (min-width:$desktop) {
     width: calc(50% - 30px);
+    }
   }
   
   .reasons__item-text {
@@ -38,6 +54,7 @@
   }
   .reasons__count {
     @include font (42px, 700, 1.36, 0.05em);
+    margin-bottom: 6px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -62,5 +79,10 @@
     color: $second-text-color;
   }
   .reasons__aftertitle {
+    @include font (18px, 400, 1.67, 0.02em);
     color: $third-text-color;
+    margin-bottom: 44px;
+    @media screen and (min-width:$desktop) {
+      margin-bottom: 0;
+    }
   }

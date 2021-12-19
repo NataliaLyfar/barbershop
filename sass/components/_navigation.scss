@@ -1,6 +1,10 @@
 .nav__list {
-  display: flex;
-  align-items: center;
+  display: none;
+  @media screen and (min-width:$tablet) {
+    display: flex;
+    align-items: center;
+  }
+ 
 }
   
   .nav__item:not(:last-child) {

@@ -2,12 +2,21 @@
   background-color: $secondary-color;
   }
 .masters__list {
-  display: flex;
+  @media screen and (min-width:$desktop) {
+    display: flex;
+  }
 }
 .masters__item {
+  @media screen and (max-width:1199px) {
+    &:not(:last-child) {
+    margin-bottom: 64px;
+    }
+  }
+  @media screen and (min-width:$desktop) {
   flex-basis: calc((100% - 2 * 30px) / 3);
   &:not(:last-child) {
     margin-right: 30px;
+  }
   }
   &:hover .masters__overlay {
     transform: translateY(0);

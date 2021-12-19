@@ -33,27 +33,35 @@
     color: $main-color;
   }
   .prices__wrap {
-    display: flex;
+    background-image: linear-gradient(
+      180deg,
+      #090b13 0%,
+      rgba(9, 11, 19, 0.2) 100%
+    );
+    padding: 30px;
     margin-bottom: 50px;
+    @media screen and (min-width:$desktop) {
+    display: flex;
+    }
   }
   .prices__list {
+  
+    @media screen and (min-width:$desktop) {
     width: 50%;
     padding: 30px 40px;
   }
+}
   .prices__list--light {
+    margin-bottom: 20px;
+    @media screen and (min-width:$desktop) {
+      margin-bottom: 0;
     background-image: linear-gradient(
       180deg,
       #171a24 0%,
       rgba(23, 26, 36, 0.2) 100%
     );
   }
-  .prices-list--dark {
-    background-image: linear-gradient(
-      180deg,
-      #090b13 0%,
-      rgba(9, 11, 19, 0.2) 100%
-    );
-  }
+}
   
   .prices__item {
     display: flex;
@@ -74,6 +82,7 @@
   }
   
   .prices__item-text {
+    @include font (14px, 400, 2.14, 0.02em);
     color: $first-text-color;
     &.description {
         order: -1;

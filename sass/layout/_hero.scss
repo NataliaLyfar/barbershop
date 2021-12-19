@@ -1,14 +1,36 @@
+.hero {
+  @media screen and (max-width:767px) {
+  background-image: linear-gradient(
+        rgba($tertiary-color, 0.2),
+        rgba($tertiary-color, 0.2)
+      ),
+      url("../img/hero-mobile-min.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $secondary-color;
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba($tertiary-color, 0.2),
+        rgba($tertiary-color, 0.2)), url("../img/hero-mobile@2x-min.jpg");
+    }
+}
+}
 .hero__container {
     display: flex;
   }
   .hero--left {
+    display: none;
+  @media screen and (min-width:$tablet) {
     width: 93px;
     display: flex;
     align-items: flex-end;
     padding-left: 23px;
     padding-right: 40px;
   }
+  }
   .hero__list {
+    display: none;
+  @media screen and (min-width:$tablet) {
     transform: rotate(-90deg) translate(-15px);
     display: flex;
     transform-origin: top left;
@@ -27,6 +49,7 @@
   }
     }
   }
+  }
   .hero__item + .hero__item {
     margin-left: 40px;
   }
@@ -35,20 +58,7 @@
     padding-top: 272px;
     padding-bottom: 206px;
     padding-left: 96px;
-    background-image: linear-gradient(
-        rgba($tertiary-color, 0.2),
-        rgba($tertiary-color, 0.2)
-      ),
-      url("../img/hero-mobile-min.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: $secondary-color;
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba($tertiary-color, 0.2),
-        rgba($tertiary-color, 0.2)), url("../img/hero-mobile@2x-min.jpg");
-    }
-    @media (min-width:481px) {
+    @media (min-width:$tablet) {
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
         rgba($tertiary-color, 0.2)), url("../img/hero-tablet-min.jpg");
   @media (min-device-pixel-ratio: 2),
@@ -59,7 +69,7 @@
    rgba($secondary-color, 0.4)), url("../img/hero-tablet@2x-min.jpg");
   }
   }  
-    @media (min-width:769px) {
+    @media (min-width:$desktop) {
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
         rgba($tertiary-color, 0.2)), url("../img/hero-desktop-min.jpg");
       @media (min-device-pixel-ratio: 2),
@@ -70,7 +80,7 @@
         rgba($tertiary-color, 0.2)), url("../img/hero-desktop@2x-min.jpg");
       }
   }
-  }
+}
   .hero__link {
     @include transition (color);
     @extend %secondary-link-style;

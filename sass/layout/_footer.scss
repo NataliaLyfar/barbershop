@@ -1,9 +1,18 @@
 .footer {
-    display: flex;
-    align-items: center;
+  padding: 44px 0;
+  @media screen and (min-width:$tablet) {
     padding: 55px 0;
   }
+}
+  .footer__container {
+    display: flex;
+    flex-direction: column-reverse;
+    @media screen and (min-width:$tablet) {
+      align-items: center;
+  }
+  }
   .footer__list {
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     margin-left: auto;
@@ -21,10 +30,12 @@
   }
   .footer__copy {
   @extend %secondary-link-style;
+  color: $first-text-color;
   }
   .footer__link {
   @include transition (color);
   @extend %secondary-link-style;
+  color: $second-text-color;
   &:hover,
   &:focus {
   color: $accent-color;
