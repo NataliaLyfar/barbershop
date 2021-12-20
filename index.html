@@ -24,9 +24,13 @@
     <header class="header">
       <!--Хедер сайдбар-->
       <div class="container header__container">
-        <nav class="header__navigation">
           <a class="logo" href="./index.html"
             ><svg class="logo-icon" width="66" height="56"><use href="./img/symbol-defs.svg#icon-Logo"></use></svg></a>
+            <button type="button" class="menu__btn" data-mobile-btn aria-expanded="false"
+            aria-controls="mobile-menu"><svg class="menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню"><use href="img/symbol-defs.svg#icon-menu_40px" class="icon__menu"></use><use href="img/symbol-defs.svg#icon-close_40px" class="icon__close"></use>
+            </svg> </button>
+            <div class="menu" data-menu-container id="mobile-menu">
+        <nav class="header__navigation">
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link current" href="#about">О нас</a>
@@ -48,22 +52,28 @@
           <a class="header__contacts--tel" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-
           <button class="header__button btn" type="button" data-modal-open>онлайн-запись</button>
         </div>
+          <ul class="connect__list">
+            <li class="connect__item">
+              <a href="" class="connect__link">Instagram</a>
+            </li>
+            <li class="connect__item"><a href="" class="connect__link">Youtube</a></li>
+          </ul>
+      </div>
       </div>
     </header>
     <main>
       <section class="hero">
-        <div class="container hero__container">
+        <div class=" container hero__container">
           <div class="hero--left">
-          <ul class="hero__list">
-            <li class="hero__item">
-              <a href="" class="hero__link">Instagram</a>
-            </li>
-            <li class="hero__item"><a href="" class="hero__link">Youtube</a></li>
-          </ul>
-</div>
+            <ul class="hero__list">
+              <li class="hero__item">
+                <a href="" class="hero__link">Instagram</a>
+              </li>
+              <li class="hero__item"><a href="" class="hero__link">Youtube</a></li>
+            </ul>
+  </div> 
           <div class="hero--right">
             <p class="hero__pretitle pretitle" lang="en">
               A hair salon for men in Kyiv
@@ -530,6 +540,13 @@
         </form>
       </div>
     </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

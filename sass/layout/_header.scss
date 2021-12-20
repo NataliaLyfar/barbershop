@@ -8,23 +8,85 @@
     display: flex;
     align-items: center;
   }
-  .header__navigation {
-    display: flex;
-    align-items: center;
+  .header__navigation { 
+  @media screen and (min-width:$tablet) {
+  display: flex;
+  align-items: center;
   }
-
+  }
 .header__contacts {
-  display: none;
   @media screen and (min-width:$tablet) {
     display: flex;
+    flex-direction: column-reverse;
     margin-left: auto;
+  }
+  @media screen and (min-width:$desktop) {
+    display: flex;
+    flex-direction: row-reverse;
     align-items: center;
   }
   }
   .header__contacts--tel {
-   @extend %primary-link-style; 
-    margin-right: 40px;
+    @extend %primary-link-style; 
+    font-size: 18px;
+    color: $second-text-color;
+    display: block;
+    margin-bottom: 24px;
+    @media screen and (min-width:$tablet) {
+    font-size: 12px;
+   color: $main-color;
+    margin-top: 20px;
+    margin-bottom: 0;
   }
+  @media screen and (min-width:$desktop) {
+    margin: 0 0 0 37px;
+  }
+}
   .header__button {
+    color: $second-text-color;
+    @media screen and (min-width:$tablet) {
     color: $main-color;
   }
+}
+
+.connect__list {
+@media screen and (min-width:$tablet) {
+  display: none;
+  }
+}
+.connect__item {
+  &:first-child {
+    margin-bottom: 24px;
+    @media screen and (min-width:$desktop) {
+      margin-right: 40px;
+      }
+      display: flex;
+  align-items: center;
+    &::before {
+      content: "";
+      width: 60px;
+      height: 1px;
+      background-color: $second-text-color;
+      margin-right: 40px;
+      &:hover,
+    &:focus {
+    background-color: $accent-color;}
+    }
+  }
+  &:last-child {
+    margin-left: 100px
+  }
+}
+
+.connect__link {
+  @include transition (color);
+  @extend %secondary-link-style;
+  font-family: Open Sans;
+  font-size: 14px;
+  color: $second-text-color;
+  font-style: normal;
+  &:hover,
+  &:focus {
+  color: $accent-color;
+}
+}

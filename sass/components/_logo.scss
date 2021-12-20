@@ -1,5 +1,10 @@
 .logo {
-  color: $second-text-color;
+  color: $main-color;
+  padding: 40px 0;
+  @media screen and (min-width:$tablet) {
+    color: $second-text-color;
+    padding: 32px 0;
+  }
 }
   .logo-icon {
   fill: currentColor;

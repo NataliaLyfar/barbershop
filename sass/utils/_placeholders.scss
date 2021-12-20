@@ -5,10 +5,8 @@ display: flex;
 }
 %primary-link-style {
   font-weight: 600;
-  font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-  color: $main-color;
   &:hover,
   &:focus {
   color: $accent-color;
@@ -16,7 +14,7 @@ display: flex;
 }
 %secondary-link-style {
   font-weight: 600;
-  font-size: 11px;
+
   line-height: 1.36;
   letter-spacing: 0.2em;
 }
