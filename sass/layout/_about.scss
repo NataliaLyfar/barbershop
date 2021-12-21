@@ -1,13 +1,8 @@
 
   .about__container {
     @media screen and (min-width:$tablet) {
-      padding: 100px 0;
       display: flex;
   }
-    @media screen and (min-width:$desktop){
-      padding-top: 139px;
-      padding-bottom: 121px;
-    } 
 }
   .about__list {
     display: none;
@@ -61,9 +56,6 @@ flex-shrink: 0;
     @include font (14px, 400, 1.86, 0.02em);
     margin-bottom: 40px;
     color: $third-text-color;
-    @media screen and (min-width:$tablet) {
-      margin-bottom: 44px;
-    }
   }
   .about__btn {
     color: $second-text-color;

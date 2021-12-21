@@ -1,4 +1,6 @@
 .prices {
+  margin: 0 auto;
+  width: $mobile;
     background-image: url("../img/prices-mobile-min.png");
     background-position: center;
     background-size: cover;
@@ -8,12 +10,14 @@
       background-image: url("../img/prices-mobile@2x-min.png");
     }
     @media screen and (min-width: 481px) {
+      min-width:$tablet;
       background-image: url("../img/prices-tablet-min.png");
       @media (min-resolution: 2dppx) {
         background-image: url("../img/prices-tablet@2x-min.png");
       }
     }
     @media screen and (min-width: 769px) {
+      min-width: $desktop;
       background-image: url("../img/prices-desktop-min.png");
       @media (min-resolution: 2dppx) {
         background-image: url("../img/prices-desktop@2x-min.png");
@@ -40,12 +44,15 @@
     );
     padding: 30px;
     margin-bottom: 50px;
+    @media screen and (min-width:$tablet) {
+      padding: 30px 40px;
+    }
     @media screen and (min-width:$desktop) {
     display: flex;
+    padding: 0;
     }
   }
   .prices__list {
-  
     @media screen and (min-width:$desktop) {
     width: 50%;
     padding: 30px 40px;
@@ -87,6 +94,9 @@
     &.description {
         order: -1;
       }
+      @media screen and (min-width:$tablet) {
+        @include font (18px, 400, 1.67, 0.02em);
+      }  
   }
   
   .prices__btn {

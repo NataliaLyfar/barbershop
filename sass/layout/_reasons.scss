@@ -4,19 +4,32 @@
   .reasons__container {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: space-between;
+    @media screen and (min-width:$desktop) {
+     flex-direction: row; 
+     justify-content: space-between;
+    }
   }
   .reasons--left {
+    margin-left: auto;
     display: flex;
     justify-content: center;
+    @media screen and (min-width:$tablet) {
+      width: 450px;
+    }
+    @media screen and (min-width:$desktop) {
+      width: 370px;
+      margin: 0 auto;
+      }
   }
   .reasons__list {
     display: flex;
     flex-wrap: wrap;
   }
   .reasons__item {
-    width: 193px;
+width: 193px;
     height: 133px;
-    padding: 20px 36px;
+   padding: 20px 30px;
     background-color: $secondary-color;
     &:nth-child(odd) {
         margin-right: 30px;
@@ -24,27 +37,25 @@
       &:nth-child(even) {
         margin-top: 30px;
       }
-      &:last-child {
-        padding: 20px 30px;
-      }
       @media screen and (min-width:$tablet) {
+        padding: 20px 40px;
         width: 210px;
-        padding: 20px 44px;
-        &:last-child {
-          padding: 20px 40px;
-        }
       }
     @media screen and (min-width:$desktop) {
-      width: 170px;
       padding: 20px;
+      width: 170px;
     }
   }
-  
-  .reasons--right,
-  .reasons--left {
-    @media screen and (min-width:$desktop) {
-    width: calc(50% - 30px);
+  .reasons--right {
+    @media screen and (min-width:$tablet) {
+    margin-right: auto;
+    width: 500px;
     }
+    @media screen and (min-width:$desktop) {
+      width: 460px;
+      margin: 0 auto;
+      }
+      
   }
   
   .reasons__item-text {

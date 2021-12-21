@@ -1,38 +1,49 @@
 .hero__container {
+  margin: 0 auto;
   display: flex;
-  @media screen and (min-width:$tablet) {
-    padding: 0 39px;
-  } 
+  @media screen and (min-width:$mobile) {
+    width: $mobile;
+}
+@media screen and (min-width:$tablet) {
+    width: $tablet;
+}
+@media screen and (min-width:$desktop) {
+    width: $desktop;
+}
 }
   .hero--left {
-    display: none;
+    @media screen and (max-width:767px) {
+    display: none;}
     @media screen and (min-width:$tablet) { 
+  
       background-color: $main-color;
-    width: 93px;
     display: flex;
     align-items: flex-end;
-    padding-left: 23px;
-    padding-right: 40px;
+    justify-content: center;
     }
     @media screen and (min-width:$desktop) {
-      padding-left: 23px;
-    padding-right: 40px;
     }
   }
   .hero__list {
+    @media screen and (max-width:767px) {
+      display: none;}
+    width: 93px;
     transform: rotate(-90deg) translate(-15px);
     display: flex;
     transform-origin: top left;
     align-items: center;
     &::before {
       content: "";
+      display: block;
       width: 60px;
       height: 1px;
-      bottom: 0;
-      left: 0;
       background-color: $third-text-color;
       margin: 0 40px;
     }
+  }
+  .hero__item {
+    padding-top: 37px;
+    padding-bottom: 37px;
   }
   
   .hero__item + .hero__item {
@@ -57,11 +68,7 @@
     background-color: $secondary-color;
     @media screen and (max-width:767px) {
       width: 100%;
-      margin: 0 -31px;
-    padding-top: 208px;
-    padding-bottom: 183px;
-    padding-left: 31px; 
-    
+    }
     background-image: linear-gradient(
       rgba($tertiary-color, 0.2),
       rgba($tertiary-color, 0.2)
@@ -71,12 +78,8 @@
     background-image: linear-gradient(rgba($tertiary-color, 0.2),
       rgba($tertiary-color, 0.2)), url("../img/hero-mobile@2x-min.jpg");
   }
-}
-    @media (min-width:$tablet) {
+    @media screen and (min-width:$tablet) {
     flex-grow: 1;
-    padding-top: 280px;
-    padding-bottom: 237px;
-    padding-left: 70px;
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
         rgba($tertiary-color, 0.2)), url("../img/hero-tablet-min.jpg");
   @media (min-device-pixel-ratio: 2),
@@ -87,10 +90,7 @@
    rgba($secondary-color, 0.4)), url("../img/hero-tablet@2x-min.jpg");
   }
   }  
-    @media (min-width:$desktop) {
-      padding-top: 272px;
-    padding-bottom: 206px;
-    padding-left: 96px;
+    @media screen and (min-width:$desktop) {
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
         rgba($tertiary-color, 0.2)), url("../img/hero-desktop-min.jpg");
       @media (min-device-pixel-ratio: 2),
@@ -102,7 +102,20 @@
       }
   }
 }
-  
+  .hero__content {
+    padding-top: 208px;
+    padding-bottom: 183px;
+    padding-left: 31px; 
+    @media screen and (min-width:$tablet) {
+      padding-top: 208px;
+    padding-bottom: 183px;
+    padding-left: 31px; 
+    }
+    @media screen and (min-width:$desktop) {
+      padding-top: 272px;
+    padding-bottom: 206px;
+    padding-left: 96px;}
+  }
 
   .hero__pretitle {
     margin-bottom: 20px;

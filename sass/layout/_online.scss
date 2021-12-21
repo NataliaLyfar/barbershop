@@ -15,6 +15,9 @@
     color: $main-color;
     margin-bottom: 44px;
     text-align: center;
+    @media  screen and (min-width:$tablet) {
+      text-align: left;
+      }
   }
   .input-wrap {
     @media screen and (min-width:$tablet) {
@@ -73,4 +76,7 @@
     .online__button {
       margin: 0 auto;
       color: $main-color;
+      @media  screen and (min-width:$tablet) {
+      margin: 0;
+      }
     }

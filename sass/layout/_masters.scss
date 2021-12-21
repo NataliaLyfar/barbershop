@@ -2,6 +2,7 @@
   background-color: $secondary-color;
   }
 .masters__list {
+  
   @media screen and (min-width:$desktop) {
     display: flex;
   }

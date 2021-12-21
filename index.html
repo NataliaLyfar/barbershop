@@ -65,7 +65,7 @@
     </header>
     <main>
       <section class="hero">
-        <div class=" container hero__container">
+        <div class="hero__container">
           <div class="hero--left">
             <ul class="hero__list">
               <li class="hero__item">
@@ -75,6 +75,7 @@
             </ul>
   </div> 
           <div class="hero--right">
+            <div class="hero__content">
             <p class="hero__pretitle pretitle" lang="en">
               A hair salon for men in Kyiv
             </p>
@@ -83,6 +84,7 @@
               Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
               и со вкусом.
             </p>
+          </div>
           </div>
         </div>
         
@@ -94,10 +96,10 @@
             <li class="about__item">
               <picture>
                 <source srcset="./img/about-desktop-1-min.jpg 1x, ./img/about-desktop-1@2x-min.jpg 2x"
-                media="(min-width:$desktop)"
+                media="(min-width:1200px)"
                  >
                 <source srcset="./img/about-tablet-1-min.jpg 1x, ./img/about-tablet-1@2x-min.jpg 2x"
-               media="(min-width:$tablet)"
+               media="(min-width:768px)"
                 >
                 <img
                   src="./img/about-desktop-1-min.jpg"
@@ -108,10 +110,10 @@
             <li class="about__item">
               <picture>
                 <source srcset="./img/about-desktop-2-min.jpg 1x, ./img/about-desktop-2@2x-min.jpg 2x"
-                media="(min-width:$desktop)"
+                media="(min-width:1200px)"
                  >
                 <source srcset="./img/about-tablet-2-min.jpg 1x, ./img/about-tablet-2@2x-min.jpg 2x"
-               media="(min-width:$tablet)"
+               media="(min-width:768px)"
                 >
                 <img
                   src="./img/about-desktop-2-min.jpg"
@@ -454,10 +456,9 @@
           </ul>
         </div>
       </section>
-        <div class="contact-wrap">
+            <div class="container contact-wrap">
       <!--Онлайн-запись-->
-      <section class="online section">
-        <div class="container">
+      <section class="online section">  
         <h2 class="online__title section-title">Онлайн-запись</h2>
         <form action="#" class="online__form">
           <div class="input-wrap"><input type="text" class="online__input" placeholder="Имя*" required>
@@ -465,12 +466,11 @@
           <textarea name="coment" id="" placeholder="Сообщение" class="online__textarea"></textarea>
           <button type="submit" class="btn online__button">Отправить</button>
         </form>
-      </div>
       </section>
       <!--Контакты-->
       <section class="section contacts">
-        <div class="container">
         <h2 class="contacts__title section-title" id="contacts">Контакты</h2>
+        <div class="contacts__container">
         <address class="address">
           <ul class="contacts__list">
             <li class="contacts__item">
@@ -494,11 +494,13 @@
             </li>
           </ul>
         </address>
+        <div class="shedule">
         <p class="contact__text pretitle">время работы</p>
         <p class="schedule-text">Ежедневно с 9:00 до 22:00</p>
       </div>
-      </section>
     </div>
+      </section>
+      </div>
     </main>
     <footer class="footer">
 <div class="container footer__container">
