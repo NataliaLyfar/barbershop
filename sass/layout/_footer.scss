@@ -34,11 +34,14 @@
   }
   .footer__copy {
   @extend %secondary-link-style;
+  font-size: 11px;
   color: $first-text-color;
   }
   .footer__link {
+  @include decotation (none);
   @include transition (color);
   @extend %secondary-link-style;
+  font-size: 11px;
   color: $second-text-color;
   &:hover,
   &:focus {

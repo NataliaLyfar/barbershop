@@ -7,3 +7,6 @@
     line-height: $line-height;
     letter-spacing: $letter-spacing;
 }
+@mixin decotation ($value) {
+text-decoration: $value;
+}

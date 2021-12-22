@@ -1,21 +1,17 @@
 .hero__container {
   margin: 0 auto;
   display: flex;
-  @media screen and (min-width:$mobile) {
-    width: $mobile;
-}
-@media screen and (min-width:$tablet) {
-    width: $tablet;
+  @media screen and (min-width:$tablet) {
+    padding: 0 39px;
 }
 @media screen and (min-width:$desktop) {
-    width: $desktop;
+    padding: 0 15px;
 }
 }
   .hero--left {
     @media screen and (max-width:767px) {
     display: none;}
     @media screen and (min-width:$tablet) { 
-  
       background-color: $main-color;
     display: flex;
     align-items: flex-end;
@@ -25,31 +21,35 @@
     }
   }
   .hero__list {
-    @media screen and (max-width:767px) {
-      display: none;}
     width: 93px;
     transform: rotate(-90deg) translate(-15px);
     display: flex;
     transform-origin: top left;
     align-items: center;
-    &::before {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 1px;
-      background-color: $third-text-color;
-      margin: 0 40px;
-    }
-  }
-  .hero__item {
-    padding-top: 37px;
-    padding-bottom: 37px;
   }
   
-  .hero__item + .hero__item {
-    margin-left: 40px;
+  .hero__item {
+    padding: 37px 0;
+    &:first-child {
+      margin-right: 40px;
+      display: flex;
+  align-items: center;
+    &::before {
+      @include transition (background-color);
+      content: "";
+      width: 60px;
+      height: 1px;
+      background-color: $second-text-color;
+      margin-right: 40px;
+      &:hover,
+    &:focus {
+    background-color: $accent-color;}
+    }
+    }
   }
+
   .hero__link {
+    @include decotation (none);
     @include transition (color);
     @extend %secondary-link-style;
     font-family: Open Sans;
@@ -61,14 +61,12 @@
     color: $accent-color;
   }
   }
+
   .hero--right {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: $secondary-color;
-    @media screen and (max-width:767px) {
-      width: 100%;
-    }
     background-image: linear-gradient(
       rgba($tertiary-color, 0.2),
       rgba($tertiary-color, 0.2)
@@ -78,8 +76,7 @@
     background-image: linear-gradient(rgba($tertiary-color, 0.2),
       rgba($tertiary-color, 0.2)), url("../img/hero-mobile@2x-min.jpg");
   }
-    @media screen and (min-width:$tablet) {
-    flex-grow: 1;
+    @media screen and (min-width:481px) {
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
         rgba($tertiary-color, 0.2)), url("../img/hero-tablet-min.jpg");
   @media (min-device-pixel-ratio: 2),
@@ -90,7 +87,7 @@
    rgba($secondary-color, 0.4)), url("../img/hero-tablet@2x-min.jpg");
   }
   }  
-    @media screen and (min-width:$desktop) {
+    @media screen and (min-width:769px) {
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
         rgba($tertiary-color, 0.2)), url("../img/hero-desktop-min.jpg");
       @media (min-device-pixel-ratio: 2),
@@ -101,20 +98,18 @@
         rgba($tertiary-color, 0.2)), url("../img/hero-desktop@2x-min.jpg");
       }
   }
+  @media screen and (max-width:767px) {
+    width: 100vw;
+  }
+  @media screen and (min-width:$tablet) {
+    flex-grow: 1;
+  }
 }
   .hero__content {
-    padding-top: 208px;
-    padding-bottom: 183px;
-    padding-left: 31px; 
-    @media screen and (min-width:$tablet) {
-      padding-top: 208px;
-    padding-bottom: 183px;
-    padding-left: 31px; 
-    }
+    padding: 208px 0 183px 31px;
     @media screen and (min-width:$desktop) {
-      padding-top: 272px;
-    padding-bottom: 206px;
-    padding-left: 96px;}
+    padding: 272px 0 206px 96px;
+  }
   }
 
   .hero__pretitle {
@@ -141,7 +136,7 @@
   .hero__aftertitle {
     max-width: 306px;
     @media screen and (min-width:$tablet) {
-      max-width: 400px;
+    max-width: 400px;
     }
     color: $first-text-color;
   }

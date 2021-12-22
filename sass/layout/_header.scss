@@ -1,4 +1,5 @@
 .header {
+  margin: 0 auto;
     position: absolute;
     width: 100%;
     top: 0;
@@ -27,6 +28,7 @@
   }
   }
   .header__contacts--tel {
+    @include decotation (none);
     @extend %primary-link-style; 
     font-size: 18px;
     color: $second-text-color;
@@ -79,14 +81,11 @@
 }
 
 .connect__link {
+  @include decotation (none);
   @include transition (color);
   @extend %secondary-link-style;
   font-family: Open Sans;
   font-size: 14px;
   color: $second-text-color;
   font-style: normal;
-  &:hover,
-  &:focus {
-  color: $accent-color;
-}
 }

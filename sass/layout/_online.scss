@@ -1,8 +1,10 @@
+.low-section {
+  background-color: $tertiary-color;
+}
 .contact-wrap {
   @media screen and (min-width:$desktop) {
     display: flex;
   }
-    background-color: $tertiary-color;
     }
     
   .online {

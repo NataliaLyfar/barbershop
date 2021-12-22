@@ -25,18 +25,24 @@
   .reasons__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .reasons__item {
 width: 193px;
     height: 133px;
    padding: 20px 30px;
     background-color: $secondary-color;
+    @media screen and (max-width:479px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width:$mobile) {
     &:nth-child(odd) {
         margin-right: 30px;
       }
       &:nth-child(even) {
         margin-top: 30px;
       }
+    }
       @media screen and (min-width:$tablet) {
         padding: 20px 40px;
         width: 210px;

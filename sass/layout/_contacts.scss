@@ -1,9 +1,9 @@
 .contacts {
-  
   @media screen and (min-width:$desktop) {
     width: calc(50% + 15px);
     padding: 130px 0 130px 100px; 
   }
+  margin: 0 -31px;
     background-color: $tertiary-color;
     background-image: url("../img/contacts-mobile-min.png");
     background-repeat: no-repeat;
@@ -14,6 +14,7 @@
         rgba($tertiary-color, 0.2)), url("../img/contacts-mobile@2x-min.png");
     }
     @media (min-width:481px) {
+     
       background-image: linear-gradient(rgba($tertiary-color, 0.2),
         rgba($tertiary-color, 0.2)), url("../img/contacts-tablet-min.png");
   @media (min-device-pixel-ratio: 2),
@@ -37,6 +38,7 @@
   }
   }
   .contacts__container {
+    padding: 0 31px;
     @media screen and (min-width:$tablet) and (max-width:1199px) {
       display: flex;
       justify-content: space-between;
@@ -52,6 +54,7 @@
     // width: 270px;
   }
   .contacts__title {
+    padding: 0 31px;
     margin-bottom: 40px;
     color: $main-color;
     text-align: center;
@@ -72,7 +75,7 @@
   .contacts__item:not(:last-child) {
     margin-bottom: 20px;
     & .contacts__link {
-    text-decoration: none;
+    @include decotation (none);
     }
   }
   .contact__text {

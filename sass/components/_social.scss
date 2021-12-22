@@ -12,6 +12,7 @@
 .social__link {
   @include transition (background-color);
   @include transition (color);
+  @include decotation (none);
   @extend %flex-center-style;
   width: 100%;
   height: 100%;

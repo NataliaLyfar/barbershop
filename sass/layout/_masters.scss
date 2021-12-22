@@ -1,14 +1,26 @@
+
 .masters {
   background-color: $secondary-color;
   }
+.masters__container {
+  margin: 0 auto;
+    padding: 0 31px;
+    @media screen and (min-width:$tablet) {
+      padding: 0 159px;
+  }
+    @media screen and (min-width:$desktop) {
+        padding: 0 15px;
+    } 
+}
 .masters__list {
-  
   @media screen and (min-width:$desktop) {
     display: flex;
   }
 }
 .masters__item {
   @media screen and (max-width:1199px) {
+    max-width: 450px;
+    margin: 0 auto;
     &:not(:last-child) {
     margin-bottom: 64px;
     }

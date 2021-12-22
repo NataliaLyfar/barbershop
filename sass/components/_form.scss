@@ -87,7 +87,7 @@
 }
  
   .policy-link {
-  color: inherit;
+  color: $accent-color;
   text-decoration-skip-ink: none;
   &:hover, &:focus {
   color: $accent-color;

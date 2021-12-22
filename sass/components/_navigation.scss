@@ -2,9 +2,12 @@
   @media screen and (min-width:$tablet) {
     display: flex;
     align-items: center;
+    margin-left: 23px;
   }
-}
-  
+  @media screen and (min-width:$desktop) {
+    margin-left: 40px;
+  }
+}  
   .nav__item:not(:last-child) {
     margin-bottom: 24px;
     @media screen and (min-width:$tablet) {
@@ -15,17 +18,10 @@
       margin-right: 40px;
     }
 }
-  .nav__item:first-child {
-    @media screen and (min-width:$tablet) {
-  margin-left: 50px;
-}
-@media screen and (min-width:$desktop) {
-  margin-left: 70px;
-}
-  }
   .nav__link {
   @extend %primary-link-style;
   @include transition (color);
+  @include decotation (none);
   font-size: 18px;
   color: $second-text-color;
   @media screen and (min-width:$tablet) {
@@ -48,4 +44,4 @@
 @media screen and (min-width:$desktop) {
   padding: 48px 0;
 }
-  }
+}

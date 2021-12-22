@@ -23,6 +23,7 @@ flex-shrink: 0;
     }
    @media screen and (min-width:$desktop) {
     margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 .about--right {
@@ -37,7 +38,6 @@ flex-shrink: 0;
       background-color: $second-text-color;
     }
   }
-  
   .about__title {
     font-family: Raleway;
   @include font (28px, 700, 1.17, 0.05em);
