@@ -9,11 +9,12 @@
       mobileMenu.classList.toggle('is-open');
       openMenuBtn.classList.toggle('is-open');
     //   closeMenuBtn.classList.toggle('is-open');
-  
-      const scrollLockMethod = !isMenuOpen
-        ? 'disableBodyScroll'
-        : 'enableBodyScroll';
-      bodyScrollLock[scrollLockMethod](document.body);
+    
+     
+      // const scrollLockMethod = !isMenuOpen
+      //   ? 'disableBodyScroll'
+      //   : 'enableBodyScroll';
+      // bodyScrollLock[scrollLockMethod](document.body);
     };
   
     openMenuBtn.addEventListener('click', toggleMenu);

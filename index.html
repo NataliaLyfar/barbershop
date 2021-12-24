@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
@@ -23,7 +27,7 @@
   <body>
     <header class="header">
       <div class="container header__container">
-          <a class="logo" href="./index.html"
+          <a class="logo animate__animated animate__zoomIn" href="./index.html"
             ><svg class="logo-icon" width="66" height="56"><use href="./img/symbol-defs.svg#icon-Logo"></use></svg></a>
             <button type="button" class="menu__btn" data-mobile-btn aria-expanded="false"
             aria-controls="mobile-menu"><svg class="menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню"><use href="img/symbol-defs.svg#icon-menu_40px" class="icon__menu"></use><use href="img/symbol-defs.svg#icon-close_40px" class="icon__close"></use>
@@ -32,18 +36,18 @@
         <nav class="header__navigation">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link current" href="#about">О нас</a>
+              <a class="nav__link current" href="./index.html#about">О нас</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#services&prices"
+              <a class="nav__link" href="./index.html#services&prices"
                 >Услуги и цены</a
               >
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#our-masters">Мастера</a>
+              <a class="nav__link" href="./index.html#our-masters">Мастера</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#contacts">Контакты</a>
+              <a class="nav__link" href="./index.html#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -89,7 +93,7 @@
         
       </section>
       <!--О нас-->
-      <section class="about section">
+      <section class="about section" id="about">
         <div class="container about__container">
           <ul class="about__list">
             <li class="about__item">
@@ -142,7 +146,7 @@
         </div>
       </section>
       <!--Услуги и цены-->
-      <section class="prices section">
+      <section class="prices section" id="services&prices">
         <div class="container">
           <p class="prices__pretitle pretitle">
             Проведи время в компании лучших мастеров
@@ -231,7 +235,7 @@
         </div>
       </section>
       <!--Мастера-->
-      <section class="masters section">
+      <section class="masters section" id="our-masters">
         <div class="masters__container">
           <p class="masters__pretitle pretitle">
             для настоящих ценителей атмосферы
@@ -468,7 +472,7 @@
         </form>
       </section>
       <!--Контакты-->
-      <section class="section contacts">
+      <section class="section contacts" id="contacts">
         <h2 class="contacts__title section-title" id="contacts">Контакты</h2>
         <div class="contacts__container">
         <address class="address">
@@ -551,5 +555,6 @@
     ></script>
     <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/animate.js"></script>
   </body>
 </html>
