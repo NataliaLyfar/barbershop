@@ -73,6 +73,9 @@ body {
 body.modal-open {
   overflow: hidden;
 }
+body.menu {
+  overflow: hidden;
+}
 
 ul {
   list-style: none;
@@ -328,7 +331,7 @@ img {
   -webkit-transition: color 300ms linear;
   transition: color 300ms linear;
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   top: 48px;
   right: 31px;
   padding: 0;
@@ -481,7 +484,7 @@ img {
 .header {
   margin: 0 auto;
   position: absolute;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
 }
@@ -613,7 +616,7 @@ img {
     transition: -webkit-transform 300ms linear;
     transition: transform 300ms linear;
     transition: transform 300ms linear, -webkit-transform 300ms linear;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     padding: 118px 40px 227px;

@@ -3,6 +3,9 @@ body {
     &.modal-open {
       overflow: hidden;
     }
+    &.menu {
+      overflow: hidden;
+    }
   }
   ul {
     list-style: none;

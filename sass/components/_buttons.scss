@@ -39,7 +39,7 @@
 .menu__btn {
   @include transition (color);
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   top: 48px;
   right: 31px;
   padding: 0;
